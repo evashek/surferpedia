@@ -1,0 +1,43 @@
+
+
+.surf-header {
+ background-image:url('../images/C2.jpg');
+ background-size:cover;
+ height:300px;
+}
+
+.zeke {
+ background-image:url('../images/zeke.jpg');
+ background-size:cover;
+ height:500px;
+}
+
+.nikki {
+ background-image:url('../images/nikki.jpg');
+ background-size:cover;
+ height:500px;
+}
+
+.kyuss {
+ background-image:url('../images/kyuss.jpg');
+ background-size:cover;
+ height:500px;
+}
+
+.zekepic {
+ background-image:url('../images/zeke.jpg');
+ background-size:cover;
+ height:300px;
+}
+
+.nikkipic {
+ background-image:url('../images/nikki.jpg');
+ background-size:cover;
+ height:300px;
+}
+
+.kyusspic {
+ background-image:url('../images/kyuss.jpg');
+ background-size:cover;
+ height:300px;
+}
