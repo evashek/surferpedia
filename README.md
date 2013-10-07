@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![screenshot](https://raw.github.com/ics-software-engineering/play-bootstrap-template/master/doc/play-bootstrap-template-home.png)
 
 This is a sample Play application with the following features:
@@ -16,3 +17,9 @@ This is a sample Play application with the following features:
   
 
 
+=======
+surferpedia
+===========
+
+A play application providing a encyclopedia of surfers.
+>>>>>>> 95e6697c58b78b8cdcb3d17978d5c201527e62ce
