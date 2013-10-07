@@ -7,6 +7,7 @@ import views.html.zeke;
 import views.html.nikki;
 import views.html.kyuss;
 import views.html.cjhobgood;
+import views.html.kekai;
 
 
 /**
@@ -56,6 +57,15 @@ public class Application extends Controller {
    */
   public static Result cjhobgood() {
     return ok(cjhobgood.render("Welcome to Kyuss King."));
+    
+  }
+  
+  /**
+   * Returns Rabbit Kekai profile page.
+   * @return CJ Hobgood's profile.
+   */
+  public static Result kekai() {
+    return ok(kekai.render("Welcome to Rabbit Kekai."));
     
   }
 }
