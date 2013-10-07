@@ -6,6 +6,7 @@ import views.html.Index;
 import views.html.zeke;
 import views.html.nikki;
 import views.html.kyuss;
+import views.html.cjhobgood;
 
 
 /**
@@ -49,4 +50,12 @@ public class Application extends Controller {
     
   }
   
+  /**
+   * Returns CjHobgood' profile page.
+   * @return CJ Hobgood's profile.
+   */
+  public static Result cjhobgood() {
+    return ok(cjhobgood.render("Welcome to Kyuss King."));
+    
+  }
 }

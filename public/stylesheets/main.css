@@ -41,3 +41,10 @@
  background-size:cover;
  height:300px;
 }
+
+.cjhobgood {
+  background-image:url('../images/cjhobgood.jpg');
+ background-size:cover;
+ background-position: center;
+ height:500px;
+}
