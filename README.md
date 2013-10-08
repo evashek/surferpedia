@@ -3,6 +3,7 @@ surferpedia
 ===========
 
 A play application providing a encyclopedia of surfers.
+![Front page](https://raw.github.com/evashek/surferpedia/master/public/images/frontpage.png)
 
 =======
 Installation
