@@ -1,9 +1,11 @@
-![Front page](https://raw.github.com/evashek/surferpedia/master/public/images/frontpage.png)
-
 =======
 surferpedia
 ===========
+![Front page](https://raw.github.com/evashek/surferpedia/master/public/images/frontpage.png)
 
+=======
+Overview
+===========
 A play application providing a encyclopedia of surfers.
 
 =======
