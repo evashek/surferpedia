@@ -9,6 +9,10 @@ GET     /nikki                      controllers.Application.nikki()
 GET     /kyuss                      controllers.Application.kyuss()
 GET     /cjhobgood                      controllers.Application.cjhobgood()
 GET     /kekai                      controllers.Application.kekai()
+GET     /kelly                      controllers.Application.kelly()
+GET     /bethany                    controllers.Application.bethany()
+GET     /jake                       controllers.Application.jake()
+GET     /sunny                      controllers.Application.sunny()
 
 
 # Map static resources from the /public folder to the /assets URL path

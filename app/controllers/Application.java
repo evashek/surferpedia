@@ -8,7 +8,10 @@ import views.html.nikki;
 import views.html.kyuss;
 import views.html.cjhobgood;
 import views.html.kekai;
-
+import views.html.kelly;
+import views.html.sunny;
+import views.html.bethany;
+import views.html.jake;
 
 /**
  * Implements the controllers for this application.
@@ -52,20 +55,52 @@ public class Application extends Controller {
   }
   
   /**
-   * Returns CjHobgood' profile page.
+   * Returns CJ Hobgood's profile page.
    * @return CJ Hobgood's profile.
    */
   public static Result cjhobgood() {
-    return ok(cjhobgood.render("Welcome to Kyuss King."));
+    return ok(cjhobgood.render("Welcome to CJ Hobgood."));
     
   }
   
   /**
-   * Returns Rabbit Kekai profile page.
+   * Returns Rabbit Kekai's profile page.
    * @return CJ Hobgood's profile.
    */
   public static Result kekai() {
     return ok(kekai.render("Welcome to Rabbit Kekai."));
     
+  }
+  
+  /**
+   * @return Kelly Slater's page.
+   */
+  public static Result kelly() {
+    return ok(kelly.render("Welcome to Page1."));
+
+  }
+
+  /**
+   * @return Bethany Hamilton's page.
+   */
+  public static Result bethany() {
+    return ok(bethany.render("Welcome to Page1."));
+
+  }
+
+  /**
+   * @return Jake Marshall's page.
+   */
+  public static Result jake() {
+    return ok(jake.render("Welcome to Page1."));
+
+  }
+
+  /**
+   * @return Sunny Garcia's page.
+   */
+  public static Result sunny() {
+    return ok(sunny.render("Welcome to Page1."));
+
   }
 }

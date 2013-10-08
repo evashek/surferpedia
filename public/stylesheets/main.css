@@ -56,9 +56,45 @@
   height: 500px;
 }
 
-.carousel-1 {
+.rabbit {
   background: url('../images/RabbitKekaiCarousel.jpg');
   background-size: cover;
   background-position: center;
   height: 500px;
+}
+
+.kelly {
+  background: url('../images/kelly.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.sunny {
+  background: url('../images/sunny.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.bethany {
+  background: url('../images/bethany.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.jake {
+  background: url('../images/jake.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+h3 a {
+  color: white;
+}
+
+.well img {
+  width: 100%;
 }
