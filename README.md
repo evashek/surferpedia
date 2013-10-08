@@ -8,7 +8,7 @@ A play application providing a encyclopedia of surfers.
 Installation
 ===========
 
-Download the zip file, unzip, cd into directory, invoke the Play condole, and execute the run command to see the application at http://localhost:9000.
+Download the zip file, unzip, cd into directory, invoke the Play console, and execute the run command to see the application at http://localhost:9000.
 
 =======
 Usage 
