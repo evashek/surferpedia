@@ -13,6 +13,7 @@ GET     /kelly                      controllers.Application.kelly()
 GET     /bethany                    controllers.Application.bethany()
 GET     /jake                       controllers.Application.jake()
 GET     /sunny                      controllers.Application.sunny()
+GET     /souza                      controllers.Application.souza()
 
 
 # Map static resources from the /public folder to the /assets URL path

@@ -12,6 +12,7 @@ import views.html.kelly;
 import views.html.sunny;
 import views.html.bethany;
 import views.html.jake;
+import views.html.souza;
 
 /**
  * Implements the controllers for this application.
@@ -101,6 +102,14 @@ public class Application extends Controller {
    */
   public static Result sunny() {
     return ok(sunny.render("Welcome to Page1."));
+
+  }
+  
+  /**
+   * @return Adriano de Souza's page.
+   */
+  public static Result souza() {
+    return ok(souza.render("Welcome to Page1."));
 
   }
 }

@@ -91,6 +91,13 @@
   height: 500px;
 }
 
+.souza {
+  background: url('../images/souza.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
 h3 a {
   color: white;
 }
