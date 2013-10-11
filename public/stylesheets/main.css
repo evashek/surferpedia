@@ -30,14 +30,14 @@
  height:500px;
 }
 
-.cjhobgood {
+.cj {
   background-image:url('../images/cjhobgood.jpg');
  background-size:cover;
  background-position: center;
  height:500px;
 }
 
-.Rabbit-Kekai {
+.rabbitk {
   background: url('../images/RabbitKekai.jpg');
   background-postition: center;
   background-size: cover;
@@ -75,7 +75,7 @@
 .jake {
   background: url('../images/jake.jpg');
   background-size: cover;
-  background-position: center;
+  background-position:25%;
   height: 500px;
 }
 
