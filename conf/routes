@@ -4,10 +4,10 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-GET     /zeke                      controllers.Application.zeke()
+GET     /zeke                       controllers.Application.zeke()
 GET     /nikki                      controllers.Application.nikki()
 GET     /kyuss                      controllers.Application.kyuss()
-GET     /cjhobgood                      controllers.Application.cjhobgood()
+GET     /cj                         controllers.Application.cj()
 GET     /kekai                      controllers.Application.kekai()
 GET     /kelly                      controllers.Application.kelly()
 GET     /bethany                    controllers.Application.bethany()

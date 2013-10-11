@@ -3,16 +3,16 @@ package controllers;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.Index;
-import views.html.zeke;
-import views.html.nikki;
-import views.html.kyuss;
-import views.html.cjhobgood;
-import views.html.kekai;
-import views.html.kelly;
-import views.html.sunny;
-import views.html.bethany;
-import views.html.jake;
-import views.html.souza;
+import views.html.Ezekiel;
+import views.html.Nikki;
+import views.html.Kyuss;
+import views.html.CJ;
+import views.html.Kekai;
+import views.html.Kelly;
+import views.html.Sunny;
+import views.html.Bethany;
+import views.html.Jake;
+import views.html.Souza;
 
 /**
  * Implements the controllers for this application.
@@ -24,7 +24,7 @@ public class Application extends Controller {
    * @return The resulting home page. 
    */
   public static Result index() {
-    return ok(Index.render("Welcome to the home page."));
+    return ok(Index.render(""));
   }
 
   
@@ -33,7 +33,7 @@ public class Application extends Controller {
    * @return Ezekiel Lau's profile.
    */
   public static Result zeke() {
-    return ok(zeke.render("Welcome to Ezekiel Lau."));
+    return ok(Ezekiel.render(""));
     
   }
   
@@ -42,7 +42,7 @@ public class Application extends Controller {
    * @return Nikki Van Djik's profile.
    */
   public static Result nikki() {
-    return ok(nikki.render("Welcome to Nikki Van Djik."));
+    return ok(Nikki.render(""));
     
   }
   
@@ -51,7 +51,7 @@ public class Application extends Controller {
    * @return Kyuss King's profile.
    */
   public static Result kyuss() {
-    return ok(kyuss.render("Welcome to Kyuss King."));
+    return ok(Kyuss.render(""));
     
   }
   
@@ -59,57 +59,62 @@ public class Application extends Controller {
    * Returns CJ Hobgood's profile page.
    * @return CJ Hobgood's profile.
    */
-  public static Result cjhobgood() {
-    return ok(cjhobgood.render("Welcome to CJ Hobgood."));
+  public static Result cj() {
+    return ok(CJ.render(""));
     
   }
   
   /**
    * Returns Rabbit Kekai's profile page.
-   * @return CJ Hobgood's profile.
+   * @return Rabbit Kekai's profile.
    */
   public static Result kekai() {
-    return ok(kekai.render("Welcome to Rabbit Kekai."));
+    return ok(Kekai.render(""));
     
   }
   
   /**
-   * @return Kelly Slater's page.
+   * Returns Kelly Slater's profile page.
+   * @return Kelly Slater's profile.
    */
   public static Result kelly() {
-    return ok(kelly.render("Welcome to Page1."));
+    return ok(Kelly.render(""));
 
   }
 
   /**
-   * @return Bethany Hamilton's page.
+   * Returns Bethany Hamilton's profile page.
+   * @return Bethany Hamilton's profile.
    */
   public static Result bethany() {
-    return ok(bethany.render("Welcome to Page1."));
+    return ok(Bethany.render(""));
 
   }
 
   /**
-   * @return Jake Marshall's page.
+   * Returns Jake Marshall's profile page.
+   * @return Jake Marshall's profile.
    */
   public static Result jake() {
-    return ok(jake.render("Welcome to Page1."));
+    return ok(Jake.render(""));
 
   }
 
   /**
-   * @return Sunny Garcia's page.
+   * Returns Sunny Garcia's profile page.
+   * @return Sunny Garcia's profile.
    */
   public static Result sunny() {
-    return ok(sunny.render("Welcome to Page1."));
+    return ok(Sunny.render(""));
 
   }
   
   /**
-   * @return Adriano de Souza's page.
+   * Returns Adriano de Souza's profile page.
+   * @return Adriano de Souza's profile.
    */
   public static Result souza() {
-    return ok(souza.render("Welcome to Page1."));
+    return ok(Souza.render(""));
 
   }
 }
