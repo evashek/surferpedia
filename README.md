@@ -1,6 +1,6 @@
 surferpedia
 ===========
-![Front page](https://raw.github.com/evashek/surferpedia/master/public/images/frontpage.png)
+![Front page](https://raw.github.com/evashek/surferpedia/master/doc/frontpage.png)
 
 Overview
 ===========
