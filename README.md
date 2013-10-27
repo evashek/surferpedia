@@ -12,7 +12,14 @@ Download the zip file, unzip, cd into directory, invoke the Play console, and ex
 
 Usage 
 ===========
-To browse the surfer biographies in the database, use the navbar. On each bio page, click the "Edit" link to edit the information or the "Delete" link to delete the surfer.  Click "New" in the navbar to add a surfer into the database.
+To browse the surfer biographies in the database, use the navbar or click on the names shown in the "picture slide". 
+![Navigation](https://raw.github.com/evashek/surferpedia/dynamic/doc/navbar.png) ![Navigation](https://raw.github.com/evashek/surferpedia/dynamic/doc/carlink.png)
+On each bio page, click the "Edit" link to edit the information or the "Delete" link to delete the surfer.
+![Bio Page](https://raw.github.com/evashek/surferpedia/dynamic/doc/biopage.png)
+Click "New" in the navbar to add a surfer into the database.
+![Add new](https://raw.github.com/evashek/surferpedia/dynamic/doc/newform.png)
+NOTE: To add or update a surfer, you must provide the required fields.  Additionally, make sure the slug chosen is unique.
+![Form Errors](https://raw.github.com/evashek/surferpedia/dynamic/doc/badform.png)
 
 Credits
 ===========
