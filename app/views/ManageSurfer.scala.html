@@ -6,6 +6,7 @@
 @Main("Add/Update surfer", surfers) {
 <div class="container">
   @form(routes.Application.postSurfer(), 'class -> "form-horizontal") {
+    @hidden(surferForm("mode"))
     @text(surferForm("name"),
           label = "Name",
           placeholder = "Kelly Slater",

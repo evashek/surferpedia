@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 import views.formdata.SurferFormData;
 
+/**
+ * A database of surfers.
+ * @author Eva Shek
+ */
 public class SurferDB {
   
   private static Map<String, Surfer> surfers = new HashMap<>();
@@ -15,8 +19,8 @@ public class SurferDB {
    * @param surferForm Surfer form info
    */
   public static void store(SurferFormData surferForm) {
-    Surfer surfer = new Surfer(surferForm.name, surferForm.home, surferForm.awards, surferForm.carouselUrl,
-          surferForm.bioUrl, surferForm.bio, surferForm.slug, surferForm.type);
+    Surfer surfer = new Surfer(surferForm.mode, surferForm.name, surferForm.home, surferForm.awards,
+        surferForm.carouselUrl, surferForm.bioUrl, surferForm.bio, surferForm.slug, surferForm.type);
     surfers.put(surferForm.slug, surfer);
   }
   
@@ -32,47 +36,27 @@ public class SurferDB {
     return false;
   }
   
+  /**
+   * Retrieves a surfer by their slug.
+   * @param slug Surfer ID
+   * @return the Surfer
+   */
   public static Surfer getSurfer(String slug) {
     return surfers.get(slug);
   }
   
+  /**
+   * List of all surfers.
+   * @return Surfer list
+   */
   public static List<Surfer> getSurfers() {
     return new ArrayList<>(surfers.values());
   }
-
-  public static List<Surfer> getMales() {
-    List<Surfer> surferList = getSurfers();
-    ArrayList<Surfer> males = new ArrayList<>();
-    for (Surfer surfer : surferList) {
-      if (surfer.getType().equals("Male")) {
-        males.add(surfer);
-      }
-    }
-    return males;
-  }
   
-  public static List<Surfer> getFemales() {
-    List<Surfer> surferList = getSurfers();
-    ArrayList<Surfer> females = new ArrayList<>();
-    for (Surfer surfer : surferList) {
-      if (surfer.getType().equals("Female")) {
-        females.add(surfer);
-      }
-    }
-    return females;
-  }
-  
-  public static List<Surfer> getGroms() {
-    List<Surfer> surferList = getSurfers();
-    ArrayList<Surfer> groms = new ArrayList<>();
-    for (Surfer surfer : surferList) {
-      if (surfer.getType().equals("Grom")) {
-        groms.add(surfer);
-      }
-    }
-    return groms;
-  }
-  
+  /**
+   * Removes a surfer from the database.
+   * @param slug Surfer ID
+   */
   public static void deleteSurfer(String slug) {
     surfers.remove(slug);
   }

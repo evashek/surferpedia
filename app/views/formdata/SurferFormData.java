@@ -7,14 +7,28 @@ import play.data.validation.ValidationError;
 import models.Surfer;
 import models.SurferDB;
 
+/**
+ * Stores Surfer information from form.
+ * @author Eva Shek
+ */
 public class SurferFormData {
+  /** The mode of which a surfer is manages: is it new or is it being edited. */
+  public int mode = 0;
+  /** Name of the surfer. */
   public String name = "";
+  /** Surfers home town. */
   public String home = "";
+  /** Surfer's awards. */
   public String awards = "";
+  /** URL for carousel image. */
   public String carouselUrl = "";
+  /** URL for bio page image. */
   public String bioUrl = "";
+  /** Bio info. */
   public String bio = "";
+  /** URL slug.*/
   public String slug = "";
+  /** Male, female, or grom. */
   public String type = "";
   
   /**
@@ -29,6 +43,7 @@ public class SurferFormData {
    * @param surfer Surfer info
    */
   public SurferFormData(Surfer surfer) {
+    this.mode = surfer.getMode();
     this.name = surfer.getName();
     this.home = surfer.getHome();
     this.awards = surfer.getAwards();
@@ -67,11 +82,16 @@ public class SurferFormData {
     if (!StringUtils.isAlphanumeric(slug)) {
       errors.add(new ValidationError("slug", "Slug needs to contain only letters and numbers."));
     }
+    if (SurferDB.exists(slug) && mode == 0) {
+      errors.add(new ValidationError("slug", "Slug already exists."));
+    }
     if (!SurferTypes.isType(type)) {
       errors.add(new ValidationError("type", "Surfer type is required."));
     }
-    if (SurferDB.exists(slug)) {
-      errors.add(new ValidationError("slug", "Slug already exists."));
+    
+    // next time this form is brought up, it will be to edit the surfer
+    if (mode == 0 && errors.isEmpty()) {
+      mode = 1; //EDIT
     }
     return errors.isEmpty() ? null : errors;
   }

@@ -5,6 +5,7 @@ package models;
  * @author Eva Shek
  */
 public class Surfer {
+  private int mode;
   private String name;
   private String home;
   private String awards;
@@ -16,6 +17,7 @@ public class Surfer {
   
   /**
    * Constructs a Surfer object with the specified values.
+   * @param mode NEW or EDIT (0 or 1)
    * @param name Surfer name
    * @param home Hometown
    * @param awards Awards won
@@ -25,8 +27,9 @@ public class Surfer {
    * @param slug URL
    * @param type male/female/grom
    */
-  public Surfer(String name, String home, String awards, String carouselUrl, String bioUrl, String bio,
+  public Surfer(int mode, String name, String home, String awards, String carouselUrl, String bioUrl, String bio,
       String slug, String type) {
+    this.setMode(mode);
     this.setName(name);
     this.setHome(home);
     this.setAwards(awards);
@@ -37,6 +40,20 @@ public class Surfer {
     this.setType(type);
   }
 
+  /**
+   * @return the mode (NEW or EDIT)
+   */
+  public int getMode() {
+    return mode;
+  }
+
+  /**
+   * @param mode set to 0 or 1
+   */
+  public void setMode(int mode) {
+    this.mode = mode;
+  }
+  
   /**
    * @return the name
    */

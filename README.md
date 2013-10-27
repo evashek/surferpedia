@@ -12,7 +12,7 @@ Download the zip file, unzip, cd into directory, invoke the Play console, and ex
 
 Usage 
 ===========
-Use the navbar to find interior pages with bio information of each surfer.
+To browse the surfer biographies in the database, use the navbar. On each bio page, click the "Edit" link to edit the information or the "Delete" link to delete the surfer.  Click "New" in the navbar to add a surfer into the database.
 
 Credits
 ===========
