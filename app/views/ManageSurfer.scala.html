@@ -1,0 +1,50 @@
+@(surferForm: Form[views.formdata.SurferFormData], surferTypeMap: Map[String, Boolean], surfers: List[Surfer])
+
+@import helper._
+@import bootstrap3._
+
+@Main("Add/Update surfer", surfers) {
+<div class="container">
+  @form(routes.Application.postSurfer(), 'class -> "form-horizontal") {
+    @text(surferForm("name"),
+          label = "Name",
+          placeholder = "Kelly Slater",
+          help = "The name of the surfer.")
+    @text(surferForm("home"),
+          label = "Home",
+          placeholder = "Cocoa Beach, Florida",
+          help = "Where this surfer hails from.")
+    @text(surferForm("awards"),
+          label = "Awards",
+          placeholder = "ASP World Tour Champion (11 times), Boost Mobile Pro (1st Place, 2007)",
+          help = "List titles and other surfing awards.")
+    @text(surferForm("carouselUrl"),
+          label = "Carousel URL",
+          placeholder = "http://example.com/picture.jpg",
+          help = "A URL to the picture to be presented in the home page carousel for this surfer.")
+    @text(surferForm("bioUrl"),
+          label = "Bio URL",
+          placeholder = "http://example.com/picture.jpg",
+          help = "A URL to the picture to be presented in the bio page for this surfer.")
+    @bootstrap3.textarea(surferForm("bio"),
+              rows = "10",
+              label = "Bio",
+              placeholder = "Bio statement goes here.",
+              help = "One paragraph description of this surfer.")
+    @slug(surferForm("slug"),
+          label = "Slug",
+          placeholder = "kellyslater",
+          help = "Letters and digits to be used to identify this surfer in URLs, i.e. http://surferpedia.com/surfer/kellyslater")
+    @bootstrap3.select(surferForm("type"),
+                      label = "Type",
+                      optionMap = surferTypeMap,
+                      isMultiple = false,
+                      help = "The type of surfer for placement in the menubar.")
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+        <button type="submit" class="btn btn-default">Add/Update</button>
+      </div>
+    </div>
+  }
+</div>
+}

@@ -1,18 +1,15 @@
 package controllers;
 
+import java.util.Map;
+import models.SurferDB;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.formdata.SurferFormData;
+import views.formdata.SurferTypes;
+import views.html.BioPage;
 import views.html.Index;
-import views.html.Ezekiel;
-import views.html.Nikki;
-import views.html.Kyuss;
-import views.html.CJ;
-import views.html.Kekai;
-import views.html.Kelly;
-import views.html.Sunny;
-import views.html.Bethany;
-import views.html.Jake;
-import views.html.Souza;
+import views.html.ManageSurfer;
 
 /**
  * Implements the controllers for this application.
@@ -24,97 +21,44 @@ public class Application extends Controller {
    * @return The resulting home page. 
    */
   public static Result index() {
-    return ok(Index.render(""));
-  }
-
-  
-  /**
-   * Returns Zeke's profile page.
-   * @return Ezekiel Lau's profile.
-   */
-  public static Result zeke() {
-    return ok(Ezekiel.render(""));
-    
+    return ok(Index.render(SurferDB.getSurfers()));
   }
   
-  /**
-   * Returns Nikki's profile page.
-   * @return Nikki Van Djik's profile.
-   */
-  public static Result nikki() {
-    return ok(Nikki.render(""));
-    
+  public static Result getSurfer(String slug) {
+    return ok(BioPage.render(SurferDB.getSurfer(slug), SurferDB.getSurfers()));
+  }
+
+  public static Result newSurfer() {
+    Map<String, Boolean> types = SurferTypes.getTypes();
+    Form<SurferFormData> surferForm = Form.form(SurferFormData.class);
+    return ok(ManageSurfer.render(surferForm, types, SurferDB.getSurfers()));
   }
   
-  /**
-   * Returns Kyuss' profile page.
-   * @return Kyuss King's profile.
-   */
-  public static Result kyuss() {
-    return ok(Kyuss.render(""));
-    
+  public static Result deleteSurfer(String slug) {
+    SurferDB.deleteSurfer(slug);
+    return redirect(routes.Application.index());
   }
   
-  /**
-   * Returns CJ Hobgood's profile page.
-   * @return CJ Hobgood's profile.
-   */
-  public static Result cj() {
-    return ok(CJ.render(""));
-    
+  public static Result manageSurfer(String slug) {
+    SurferFormData data = new SurferFormData(SurferDB.getSurfer(slug));
+    Map<String, Boolean> types = SurferTypes.getTypes(data.type);
+    Form<SurferFormData> surferForm = Form.form(SurferFormData.class).fill(data);
+    return ok(ManageSurfer.render(surferForm, types, SurferDB.getSurfers()));
   }
   
-  /**
-   * Returns Rabbit Kekai's profile page.
-   * @return Rabbit Kekai's profile.
-   */
-  public static Result kekai() {
-    return ok(Kekai.render(""));
-    
-  }
-  
-  /**
-   * Returns Kelly Slater's profile page.
-   * @return Kelly Slater's profile.
-   */
-  public static Result kelly() {
-    return ok(Kelly.render(""));
-
-  }
-
-  /**
-   * Returns Bethany Hamilton's profile page.
-   * @return Bethany Hamilton's profile.
-   */
-  public static Result bethany() {
-    return ok(Bethany.render(""));
-
-  }
-
-  /**
-   * Returns Jake Marshall's profile page.
-   * @return Jake Marshall's profile.
-   */
-  public static Result jake() {
-    return ok(Jake.render(""));
-
-  }
-
-  /**
-   * Returns Sunny Garcia's profile page.
-   * @return Sunny Garcia's profile.
-   */
-  public static Result sunny() {
-    return ok(Sunny.render(""));
-
-  }
-  
-  /**
-   * Returns Adriano de Souza's profile page.
-   * @return Adriano de Souza's profile.
-   */
-  public static Result souza() {
-    return ok(Souza.render(""));
-
+  public static Result postSurfer() {
+    Form<SurferFormData> surferForm = Form.form(SurferFormData.class).bindFromRequest();
+    Map<String, Boolean> types;
+    if (surferForm.hasErrors()) {
+      System.out.println("Errors exist.");
+      types = SurferTypes.getTypes();
+      return badRequest(ManageSurfer.render(surferForm, types, SurferDB.getSurfers()));
+    }
+    else {
+      SurferFormData data = surferForm.get();
+      SurferDB.store(data);
+      types = SurferTypes.getTypes(data.type);
+      return ok(ManageSurfer.render(surferForm, types, SurferDB.getSurfers()));
+    }
   }
 }

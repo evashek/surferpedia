@@ -1,95 +1,25 @@
 .surf-header {
- background-image:url('../images/C2.jpg');
+ background-image:url('../images/banner.jpg');
  background-size:cover;
+ background-position:center;
  height:300px;
 }
 
-.zeke {
- background-image:url('../images/zeke.jpg');
- background-size:cover;
- height:500px;
-}
-
-.nikki {
- background-image:url('../images/nikki.jpg');
- background-size:cover;
- height:500px;
+.left {
+ float:left;
 }
 
 .right {
- background-position:right;
+ float:right;
 }
 
-.center {
+.biopic {
  background-position:center;
-}
-
-.kyuss {
- background-image:url('../images/kyuss.jpg');
  background-size:cover;
  height:500px;
 }
 
-.cj {
-  background-image:url('../images/cjhobgood.jpg');
+.carpic {
  background-size:cover;
- background-position: center;
  height:500px;
-}
-
-.rabbitk {
-  background: url('../images/RabbitKekai.jpg');
-  background-postition: center;
-  background-size: cover;
-  height: 500px;
-}
-
-.rabbit {
-  background: url('../images/RabbitKekaiCarousel.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
-.kelly {
-  background: url('../images/kelly.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
-.sunny {
-  background: url('../images/sunny.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
-.bethany {
-  background: url('../images/bethany.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
-.jake {
-  background: url('../images/jake.jpg');
-  background-size: cover;
-  background-position:25%;
-  height: 500px;
-}
-
-.souza {
-  background: url('../images/souza.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-}
-
-h3 a {
-  color: white;
-}
-
-.well img {
-  width: 100%;
 }

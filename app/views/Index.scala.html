@@ -1,105 +1,54 @@
-@(message: String)
+@(surfers: List[Surfer])
 
-@Main("Surferpedia") {
+@Main("Surferpedia", surfers) {
 <div class="container">
+  @if(!surfers.isEmpty()) {
   <div id="carousel-example-generic" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="8"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="9"></li>
-    </ol>
+        @for((surfer, index) <- surfers.zipWithIndex) {
+          @if(index == 0) {
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          } else {
+            <li data-target="#carousel-example-generic" data-slide-to="@index"></li>
+          }
+        }
+        
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        
+        @for((surfer, index) <- surfers.zipWithIndex) {
+          @if(index == 0) {
+            <div class="item active">
+              <div class="carpic" style="background-image: url('@surfer.getCarouselUrl()');"></div>
+              <div class="carousel-caption">
+                <h3>@surfer.getName()</h3>
+              </div>
+            </div>
+          } else {
+            <div class="item">
+              <div class="carpic" style="background-image: url('@surfer.getCarouselUrl()');"></div>
+              <div class="carousel-caption">
+                <h3>@surfer.getName()</h3>
+              </div>
+            </div>
+          }
+          
+        }
+        
+        
+      </div>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="zeke"></div>
-        <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.zeke()">Ezekiel Lau</a>
-        </h3>
-      </div>
-      </div>
-    <div class="item">
-      <div class="cj"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.cj()">CJ Hobgood</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="rabbit"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.kekai()">Rabbit Kekai</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="kelly"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.kelly()">Kelly Slater</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="sunny"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.sunny()">Sunny Garcia</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="nikki"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.nikki()">Nikki Van Djik</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="bethany"></div>
-      <div class="carousel-caption">
-        <h3><a href="@routes.Application.bethany()">Bethany Hamilton</a></h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="kyuss"></div>
-      <div class="carousel-caption">
-        <h3>
-          <a href="@routes.Application.kyuss()">Kyuss King</a>
-        </h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="jake"></div>
-      <div class="carousel-caption">
-        <h3><a href="@routes.Application.jake()">Jake Marshall</a></h3>
-      </div>
-    </div>
-    <div class="item">
-      <div class="souza"></div>
-      <div class="carousel-caption">
-        <h3><a href="@routes.Application.souza()">Adriano De Souza</a></h3>
-      </div>
-    </div>
-  </div>
-    
 
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span>
     </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span>
     </a>
+    } else {
+        <p>Oh no! There are no surfers. How about <a href="@routes.Application.newSurfer()">adding a few?</a></p>
+    }
   </div>
 </div>
 }

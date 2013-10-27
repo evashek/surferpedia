@@ -1,4 +1,4 @@
-@(page: String)(content: Html)
+@(page: String, surfers: List[Surfer])(content: Html)
 
 <!DOCTYPE html>
 
@@ -20,7 +20,7 @@
     </head>
     <body>
     
-    <div class="surf-header"></div>
+   <div class="surf-header"></div>
      <!-- Responsive navbar -->
   <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
@@ -36,27 +36,41 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Males <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="@routes.Application.zeke()">Ezekiel Lau</a></li>
-                <li><a href="@routes.Application.cj()">CJ Hobgood</a></li>
-                <li><a href="@routes.Application.kekai()">Rabbit Kekai</a></li>
-                <li><a href="@routes.Application.kelly()">Kelly Slater</a></li>
-                <li><a href="@routes.Application.sunny()">Sunny Garcia</a></li>
-                <li><a href="@routes.Application.souza()">Adriano De Souza</a></li>
+                @if(!surfers.isEmpty()) {
+                   @for(maleSurfer <- surfers) {
+                     @if(maleSurfer.getType() == "Male") {
+                        <li><a href="@routes.Application.getSurfer(maleSurfer.getSlug())">@maleSurfer.getName()</a></li>
+                     }
+                   }
+                }
             </ul>
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Females <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="@routes.Application.nikki()">Nikki Van Djik</a></li>
-                <li><a href="@routes.Application.bethany()">Bethany Hamilton</a></li>
+                @if(!surfers.isEmpty()) {
+                   @for(femaleSurfer <- surfers) {
+                     @if(femaleSurfer.getType() == "Female") {
+                        <li><a href="@routes.Application.getSurfer(femaleSurfer.getSlug())">@femaleSurfer.getName()</a></li>
+                     }
+                   }
+                }
             </ul>
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Groms <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="@routes.Application.kyuss()">Kyuss King</a></li>
-                <li><a href="@routes.Application.jake()">Jake Marshall</a></li>
+                @if(!surfers.isEmpty()) {
+                   @for(gromSurfer <- surfers) {
+                     @if(gromSurfer.getType() == "Grom") {
+                        <li><a href="@routes.Application.getSurfer(gromSurfer.getSlug())">@gromSurfer.getName()</a></li>
+                     }
+                   }
+                }
             </ul>
+          </li>
+          <li class="@("active".when(page == "Add/Update surfer"))">
+            <a href="@routes.Application.newSurfer()">New</a>
           </li>
         </ul>
       </div>
