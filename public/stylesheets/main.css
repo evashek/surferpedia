@@ -23,3 +23,7 @@
  background-size:cover;
  height:500px;
 }
+
+.carousel-caption a {
+ color:white;
+}
