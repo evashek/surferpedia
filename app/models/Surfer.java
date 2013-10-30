@@ -14,6 +14,7 @@ public class Surfer {
   private String bio;
   private String slug;
   private String type;
+  private String footstyle;
   
   /**
    * Constructs a Surfer object with the specified values.
@@ -28,7 +29,7 @@ public class Surfer {
    * @param type male/female/grom  
    */
   public Surfer(int mode, String name, String home, String awards, String carouselUrl, String bioUrl, String bio,
-      String slug, String type) {
+      String slug, String type, String footstyle) {
     this.setMode(mode);
     this.setName(name);
     this.setHome(home);
@@ -38,6 +39,7 @@ public class Surfer {
     this.setBio(bio);
     this.setSlug(slug);
     this.setType(type);
+    this.setFootstyle(footstyle);
   }
 
   /**
@@ -164,6 +166,20 @@ public class Surfer {
    */
   public void setType(String type) {
     this.type = type;
+  }
+
+  /**
+   * @return the footstyle
+   */
+  public String getFootstyle() {
+    return footstyle;
+  }
+
+  /**
+   * @param footstyle the footstyle to set
+   */
+  public void setFootstyle(String footstyle) {
+    this.footstyle = footstyle;
   }
   
   

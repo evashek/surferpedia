@@ -20,7 +20,8 @@ public class SurferDB {
    */
   public static void store(SurferFormData surferForm) {
     Surfer surfer = new Surfer(surferForm.mode, surferForm.name, surferForm.home, surferForm.awards,
-        surferForm.carouselUrl, surferForm.bioUrl, surferForm.bio, surferForm.slug, surferForm.type);
+        surferForm.carouselUrl, surferForm.bioUrl, surferForm.bio, surferForm.slug, surferForm.type, 
+        surferForm.footstyle);
     surfers.put(surferForm.slug, surfer);
   }
   

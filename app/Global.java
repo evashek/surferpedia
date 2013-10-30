@@ -29,8 +29,8 @@ public class Global extends GlobalSettings {
         + "Institution for students of Hawaiian Ancestry) while pursuing a competitive surfing career "
         + "in which he claimed 4 National Titles. Surfing is his passion and he hopes you will develop"
         + "a passion for watching him as he comes up in rank as the next generation of surfing’s’ finest.",
-        "ezekiellau", "Male")),
-        new SurferFormData(new Surfer(1, "Nikki Van Djik", "Phillip Island, VIC, Australia", "ASP 6-Star Pantin "
+        "ezekiellau", "Male", "Goofy")),
+        new SurferFormData(new Surfer(1, "Nikki Van Dijk", "Phillip Island, VIC, Australia", "ASP 6-Star Pantin "
         + "Classic Galicia Pro Champion", "http://surfersinsuits.com.au/wp-content/uploads/2013/02/"
         + "Screen-shot-2013-02-13-at-11.10.54-AM.jpg", "http://farm6.staticflickr.com/5100/5584076462_"
         + "a2fc01a97b_z.jpg", "Nikki's Dad taught her to surf on the beaches of Phillip Island,"
@@ -40,7 +40,7 @@ public class Global extends GlobalSettings {
         + "for a wildcard to compete in the main event of the Rip Curl Women’s Pro in 2009. After surfing "
         + "her way to 9th place she was knocked out by team mate Steph Gilmore. Now 15, Nikki has been"
         + "concentrating on the Pro Junior Series and is aiming for the World Tour one day.",
-        "nikkivandjik", "Female")),
+        "nikkivandjik", "Female", "Regular")),
         new SurferFormData(new Surfer(1, "Kyuss King", "Byron Bay, Australia", "2011 U12 NSW State Titles Champion",
             "http://kyussking.com/au/wp-content/uploads/2011/12/banner44.jpg", "http://emerysurfboards.com/austral"
             + "ia/wp-content/uploads/2011/05/Kyuss-Bali-May-June-2010-sml.jpg", "At the age of 4 Kyuss featured on "
@@ -48,7 +48,7 @@ public class Global extends GlobalSettings {
             + "stance that true of a grounded point surfer.  Kyuss’s surfing talents were soon noticed by the "
             + "surf brands and was sponsored by Volcom at the age of 6. Kyuss loved competing and went on to win "
             + "many national junior events over the past years and recently claimed the 2011 U12 NSW State Titles "
-            + "Championship and added 2 perfect 10 point rides at state level.", "kyussking", "Grom"))
+            + "Championship and added 2 perfect 10 point rides at state level.", "kyussking", "Grom", "Regular"))
     };
     
     for (int i = 0; i < NUM_OF_FIRST_SURFERS; i++) {

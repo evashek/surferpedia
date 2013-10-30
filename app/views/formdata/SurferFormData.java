@@ -30,6 +30,8 @@ public class SurferFormData {
   public String slug = "";
   /** Male, female, or grom. */
   public String type = "";
+  /** Surfer footstyle. */
+  public String footstyle = "";
   
   /**
    * Default no-arg constructor.
@@ -52,6 +54,7 @@ public class SurferFormData {
     this.bio = surfer.getBio();
     this.slug = surfer.getSlug();
     this.type = surfer.getType();
+    this.footstyle = surfer.getFootstyle();
   }
   
   /**
@@ -87,6 +90,9 @@ public class SurferFormData {
     }
     if (!SurferTypes.isType(type)) {
       errors.add(new ValidationError("type", "Surfer type is required."));
+    }
+    if (footstyle == null || footstyle == "") {
+      errors.add(new ValidationError("footstyle", "Footstyle type is required."));
     }
     
     // next time this form is brought up, it will be to edit the surfer
