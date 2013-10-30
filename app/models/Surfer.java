@@ -25,7 +25,7 @@ public class Surfer {
    * @param bioUrl URL of bio picture
    * @param bio Bio information
    * @param slug URL
-   * @param type male/female/grom 
+   * @param type male/female/grom  
    */
   public Surfer(int mode, String name, String home, String awards, String carouselUrl, String bioUrl, String bio,
       String slug, String type) {
