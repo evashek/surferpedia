@@ -7,5 +7,9 @@
     <div class="row">
      @loginform(routes.Application.postLogin(), loginForm("email"), loginForm("password"))
     </div>
+    
+     @if(!models.UserInfoDB.adminDefined()) {
+        <div class="alert alert-danger">Warning: Admin credentials undefined!</div>
+     }
    </div>
 }
