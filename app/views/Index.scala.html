@@ -1,6 +1,6 @@
-@(surfers: List[Surfer])
+@(surfers: List[Surfer], isLoggedIn: Boolean, userInfo: UserInfo)
 
-@Main("Surferpedia", surfers) {
+@Main("Surferpedia", surfers, isLoggedIn, userInfo) {
 <div class="container">
   @if(!surfers.isEmpty()) {
   <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">

@@ -27,6 +27,7 @@ public class Surfer {
    * @param bio Bio information
    * @param slug URL
    * @param type male/female/grom  
+   * @param footstyle surfing stance of surfer
    */
   public Surfer(int mode, String name, String home, String awards, String carouselUrl, String bioUrl, String bio,
       String slug, String type, String footstyle) {
